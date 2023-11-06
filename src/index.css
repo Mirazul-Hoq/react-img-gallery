@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  /* margin: 1px; */
+  /* padding: 5px; */
+}
+
+.header {
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 30px;
+  margin-top: 5px;
+  border-bottom: 1px solid grey;
+  cursor: pointer;
+
+}
+
+.body {
+  box-shadow: 10px 10px 207px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 207px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 207px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 5px;
+}
+
+.deleteFile {
+  color: red;
+}
+
+.deleteFile:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,84 @@
+.image-grid {
+    --gap: 18px;
+    --num-cols: 5;
+    --row-height: 180px;
+
+    box-sizing: border-box;
+    padding: var(--gap);
+
+    display: grid;
+    grid-template-columns: repeat(var(--num-cols), 1fr);
+    grid-auto-rows: var(--row-height);
+    gap: var(--gap);
+}
+
+.image-grid-col-2 {
+    grid-column: span 2;
+}
+
+.image-grid-row-2 {
+    grid-row: span 2;
+}
+
+.main-div {
+    display: inline-block;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+    opacity: 1;
+
+}
+
+.main-div:hover .overlay {
+    opacity: 1;
+}
+
+.grid-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: cover;
+    border: 1px solid rgba(165, 159, 159, 0.3);
+    border-radius: 8px;
+
+}
+
+.overlay {
+    position: absolute;
+    top: 1px;
+    bottom: 0;
+    left: 0.8px;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(92, 90, 90, 0.3);
+    border-radius: 8px;
+}
+
+.grid-img:hover {
+
+    display: block;
+    mix-blend-mode: multiply;
+
+}
+
+.container {
+    position: absolute;
+    top: 20px;
+    left: 15px;
+    cursor: pointer;
+    z-index: 999;
+}
+
+input[type=checkbox] {
+    transform: scale(1.5);
+}
+
+@media screen and (max-width: 1024px) {
+    .image-grid {
+        --num-cols: 2;
+        --row-height: 200px;
+    }
+}
