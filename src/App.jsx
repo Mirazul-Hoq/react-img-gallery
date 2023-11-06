@@ -11,7 +11,7 @@ import img8 from './assets/images/image-8.webp'
 import img9 from './assets/images/image-9.webp'
 
 import './App.css'
-import ImageGallery from './ImageGallery/ImageGallery'
+import Gallery from './Gallery/Gallery'
 
 function App() {
     const [state, setState] = useState([
@@ -62,7 +62,7 @@ function App() {
                         </div>
                         {selectedFiles.length > 0 && <span onClick={deleteHandler} className='deleteFile' >Delete {`${selectedFiles.length == 1 ? 'file' : 'files'}`} </span>}
                     </div>
-                    <ImageGallery state={state} setState={setState} />
+                    <Gallery state={state} setState={setState} />
                 </div>
 
 

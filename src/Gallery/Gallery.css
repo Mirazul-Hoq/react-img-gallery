@@ -82,3 +82,37 @@ input[type=checkbox] {
         --row-height: 200px;
     }
 }
+
+@media only screen and (max-width: 600px) {
+    .image-grid {
+        --num-cols: 3;
+        --row-height: 100px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .image-grid {
+        --num-cols: 3;
+        --row-height: 100px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .image-grid {
+        --num-cols: 4;
+        --row-height: 100px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .image-grid {
+        --num-cols: 8;
+        --row-height: 100px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .example {
+        background: pink;
+    }
+}

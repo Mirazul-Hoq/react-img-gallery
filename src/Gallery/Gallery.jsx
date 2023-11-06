@@ -1,8 +1,8 @@
 import { useRef } from 'react'
-import './ImageGallery.css'
+import './Gallery.css'
 import img from '../assets/images/store_img.png'
 
-export default function ImageGallery({ state, setState }) {
+const Gallery = ({ state, setState }) => {
 
     const dragItem = useRef();
     const dragOverItem = useRef();
@@ -57,7 +57,7 @@ export default function ImageGallery({ state, setState }) {
                 >
                     <label className="container" >
                         <input
-                            type="checkbox" checked={image.checked} onChange={e => checkedHandler(e, image.id)}></input>
+                            type="checkbox" checked={image.checked} id={`imageCheckbox-${index}`} onChange={e => checkedHandler(e, image.id)}></input>
                         <span className="checkmark"></span>
                     </label>
                     <img
@@ -87,3 +87,5 @@ export default function ImageGallery({ state, setState }) {
         </div>
     )
 }
+
+export default Gallery;
