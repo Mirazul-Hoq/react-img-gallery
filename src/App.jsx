@@ -48,11 +48,10 @@ function App() {
             <div className="main">
                 <div className='body'>
                     <div className="header">
-                        <div>
-
+                        <div style={{ fontWeight: 'bold' }}>
                             {selectedFiles.length > 0 ?
                                 <span>
-                                    <input type="checkbox" checked={selectedFiles.length > 0} id='headerCheckbox' onChange={checkboxHandler}></input>{" "}
+                                    <input type="checkbox" checked={selectedFiles.length > 0} id='headerCheckbox' onChange={checkboxHandler}></input>{"  "}
                                     <label htmlFor='headerCheckbox'>
                                         {`${selectedFiles.length == 1 ? `${selectedFiles.length} file selected` :
                                             `${selectedFiles.length} files selected`}`}
@@ -60,7 +59,6 @@ function App() {
                                 </span> :
                                 <span>Gallery</span>
                             }
-
                         </div>
                         {selectedFiles.length > 0 && <span onClick={deleteHandler} className='deleteFile' >Delete {`${selectedFiles.length == 1 ? 'file' : 'files'}`} </span>}
                     </div>
