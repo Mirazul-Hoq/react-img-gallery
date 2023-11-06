@@ -93,26 +93,27 @@ input[type=checkbox] {
 @media only screen and (min-width: 600px) {
     .image-grid {
         --num-cols: 3;
-        --row-height: 100px;
+        --row-height: 120px;
     }
 }
 
 @media only screen and (min-width: 768px) {
     .image-grid {
         --num-cols: 4;
-        --row-height: 100px;
+        --row-height: 130px;
     }
 }
 
 @media only screen and (min-width: 992px) {
     .image-grid {
-        --num-cols: 8;
-        --row-height: 100px;
+        --num-cols: 6;
+        --row-height: 150px;
     }
 }
 
 @media only screen and (min-width: 1200px) {
-    .example {
-        background: pink;
+    .image-grid {
+        --num-cols: 6;
+        --row-height: 200px;
     }
 }
